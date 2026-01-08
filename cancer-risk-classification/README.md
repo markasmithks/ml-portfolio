@@ -56,7 +56,7 @@ CancerDataStudy/
 │   ├── random_forest.py
 │   └── gradient_boosting.py
 ├── notebooks/
-│   └── practice.ipynb
+│   
 └── README.md
 ```
 
