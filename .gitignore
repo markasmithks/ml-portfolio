@@ -1,22 +1,48 @@
+# ----------------------
 # Python
+# ----------------------
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
+# ----------------------
 # Virtual environments
+# ----------------------
 .venv/
 venv/
 env/
+.env/
 
+# ----------------------
 # Jupyter
+# ----------------------
 .ipynb_checkpoints/
 
-# IDE
+# ----------------------
+# IDE / Editor
+# ----------------------
 .vscode/
 .idea/
 
+# ----------------------
 # OS
+# ----------------------
 .DS_Store
 Thumbs.db
 
+# ----------------------
 # Logs
+# ----------------------
 *.log
+
+# ----------------------
+# PRIVATE / INTERNAL DATA
+# ----------------------
+private_data/
+
+# ----------------------
+# Optional: raw source data
+# (keep synthetic outputs only)
+# ----------------------
+# data/raw/
