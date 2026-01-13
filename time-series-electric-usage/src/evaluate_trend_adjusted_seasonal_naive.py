@@ -4,7 +4,8 @@ from pathlib import Path
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DATA_PATH = BASE_DIR / "data" / "synthetic_daily_with_trend_usage.csv"
+#DATA_PATH = BASE_DIR / "data" / "synthetic_daily_with_trend_usage.csv"
+DATA_PATH = BASE_DIR / "data" / "synthetic_daily_with_correlated_noise_usage.csv"
 
 # Load data
 df = pd.read_csv(DATA_PATH, parse_dates=["date"])
@@ -40,5 +41,5 @@ rmse = np.sqrt(mean_squared_error(y_true, y_pred))
 print("Trend-Adjusted Seasonal Naive Performance")
 print("-----------------------------------------")
 print(f"Estimated annual growth: {annual_growth:.2%}")
-print(f"MAE : {mae:,.2f} kWh")
-print(f"RMSE: {rmse:,.2f} kWh")
+print(f"MAE : {mae:,.6f} kWh")
+print(f"RMSE: {rmse:,.6f} kWh")

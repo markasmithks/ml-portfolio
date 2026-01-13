@@ -4,7 +4,8 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DATA_PATH = BASE_DIR / "data" / "synthetic_daily_with_trend_usage.csv"
+#DATA_PATH = BASE_DIR / "data" / "synthetic_daily_with_trend_usage.csv"
+DATA_PATH = BASE_DIR / "data" / "synthetic_daily_with_correlated_noise_usage.csv"
 
 # Load data
 df = pd.read_csv(DATA_PATH, parse_dates=["date"])

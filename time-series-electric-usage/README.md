@@ -88,3 +88,4 @@ achievable accuracy for this dataset. More complex models are evaluated against
 this benchmark to assess whether additional flexibility is justified under
 more realistic conditions.
 
+After introducing correlated stochastic noise, the trend-adjusted seasonal naïve baseline produces small but non-zero errors, reflecting irreducible variability driven by persistent short-term effects such as weather.
