@@ -49,4 +49,14 @@ This baseline serves as a benchmark that all subsequent models must outperform.
 
 Because the synthetic dataset was constructed to preserve a stable annual seasonal profile without long-term trend or structural change, a seasonal naïve forecast perfectly reproduces future values. This confirms that the baseline implementation is correct and establishes a lower bound on achievable error for this dataset.
 
+## Introducing Annual Trend
+
+To better reflect real-world electric load behavior, a modest year-over-year
+trend was introduced into the synthetic data generation process. This resulted
+in small but non-zero forecast errors for the seasonal naïve baseline.
+
+The resulting MAE and RMSE values are low and nearly identical, indicating a
+consistent bias due to growth rather than random forecast failures. This
+establishes a realistic and interpretable benchmark for evaluating more
+advanced forecasting models.
 
