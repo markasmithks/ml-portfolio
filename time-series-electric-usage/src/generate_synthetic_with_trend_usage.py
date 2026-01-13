@@ -8,7 +8,7 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parents[1]
 
 PRIVATE_DATA = BASE_DIR / "private_data" / "daily_kwh_2025.csv"
-OUTPUT_DATA = BASE_DIR / "data" / "synthetic_daily_usage.csv"
+OUTPUT_DATA = BASE_DIR / "data" / "synthetic_daily_with_trend_usage.csv"
 
 # -----------------------------
 # Load real data (local only)
@@ -69,10 +69,12 @@ for year in years:
         freq="D"
     )
 
+    trend_factor = 1.0 + 0.01 * (year - 2023)  # ~1% annual growth
+
     synthetic_rows.append(
         pd.DataFrame({
             "date": dates,
-            "synthetic_usage": 100 * yearly_index / yearly_index.mean()
+            "synthetic_usage": trend_factor * 100 * yearly_index / yearly_index.mean()
         })
     )
 
