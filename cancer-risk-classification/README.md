@@ -1,4 +1,7 @@
 # Cancer Risk Classification
+## Development Note
+This project was developed iteratively in an exploratory environment and later consolidated into a clean, reproducible pipeline.
+
 
 ## Overview
 This project builds machine learning models to classify cancer risk levels
